@@ -1,0 +1,90 @@
+# --- Identity ---
+id: "f38c0eca-b27a-42c6-9740-ccb723681867"
+name: "software-project"
+display_name: "Software Project"
+description: "A project type that starts with the pipelines software work repeats: specification, review, security and documentation"
+version: "1.0.0"
+engine: ">=0.1.0"
+author:
+  name: "skrptiq"
+  url: "https://hub.skrptiq.ai"
+licence: "MIT"
+repository: "https://github.com/skrpts/software-project"
+category: "project-templates"
+tags:
+  - "project-template"
+  - "developer"
+  - "software"
+dependencies: []
+
+# --- Project template (GH#1102) ---
+#
+# This block is what makes the package a project template rather than a skrpt,
+# and `entry_type` is DERIVED from its presence at publish time rather than from
+# a flag a publisher must remember: a forgotten flag would publish this as a
+# `skrpt`, which is the declared-kind-versus-reality defect the block avoids.
+#
+# A template is a GROUPING, not a bundle-of-bundles. The members are NOT
+# vendored here and installation stays per-skrpt through the existing path.
+#
+# `skrpts` is ORDERED — the sequence a person meets the work in, which is what
+# the app renders. Each member carries the version this template was authored
+# against and the content digest Hub published for it, so an installer can
+# verify what it resolved instead of trusting a version string that merely
+# resolves.
+#
+# `role` is the template author's statement of what a missing member costs:
+#   required — the project cannot do what it exists to do without it
+#   optional — the project is poorer without it but still coherent
+# Only the author knows which, and a part-way install cannot report itself
+# honestly without it.
+#
+# No member counts are restated anywhere: the app derives them from this list.
+project:
+  name: "Software Project"
+  preamble: "documents/software-project-preamble.md"
+  skrpts:
+    - slug: "feature-spec-pipeline"
+      version: "1.1.30"
+      content_digest: "sha256:821c8fcd343a833a51e23953b77d6c1bdd9de716a895a75a1b292f761df4def6"
+      role: required
+      why: "Turn an intent into a specification a developer can build against"
+    - slug: "code-review-pipeline"
+      version: "1.1.28"
+      content_digest: "sha256:834db5d04abc7cf79e60a3aa6010e1f369fdc651fc8077f4cdc2dd5308731e2d"
+      role: required
+      why: "Review a change for correctness, security and style before a human read"
+    - slug: "security-audit-pipeline"
+      version: "1.0.26"
+      content_digest: "sha256:e29ea32f54e4621471d68a37abb88b314362ffe10a997f6b196a2953e07c4d81"
+      role: optional
+      why: "Audit for vulnerabilities and insecure patterns"
+    - slug: "documentation-pipeline"
+      version: "1.2.0"
+      content_digest: "sha256:5ba5c1299582f1d87040eee76ff8a5811a26e3d5c8617b8057a65355723997b2"
+      role: optional
+      why: "Produce documentation from the code and decisions behind it"
+
+contents:
+  skills: 0
+  prompts: 0
+  workflows: 0
+  services: 0
+  sources: 0
+  documents: 1
+  assets: 0
+  total: 1
+
+security:
+  status: "pass"
+  scanned_at: "2026-10-16T20:31:38.468Z"
+  scanner_version: "3.3.0"
+  syntactic: "pass"
+  structural: "pass"
+  detected:
+    services: []
+    permissions: []
+    data_handling: []
+  undeclared: []
+  warnings: []
+  report_url: "https://hub.skrptiq.ai/skrpts/software-project/security"
