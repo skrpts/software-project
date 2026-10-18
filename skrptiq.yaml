@@ -3,7 +3,7 @@ id: "f38c0eca-b27a-42c6-9740-ccb723681867"
 name: "software-project"
 display_name: "Software Project"
 description: "A project type that starts with the pipelines software work repeats: specification, review, security and documentation"
-version: "1.0.0"
+version: "1.0.2"
 engine: ">=0.1.0"
 author:
   name: "skrptiq"
@@ -50,8 +50,8 @@ project:
       role: required
       why: "Turn an intent into a specification a developer can build against"
     - slug: "code-review-pipeline"
-      version: "1.1.28"
-      content_digest: "sha256:834db5d04abc7cf79e60a3aa6010e1f369fdc651fc8077f4cdc2dd5308731e2d"
+      version: "1.1.30"
+      content_digest: "sha256:9c9ed0b9e1c08fb124dd31c5b45320c5a5bc2a81504fe3183e53094b4b89d0b8"
       role: required
       why: "Review a change for correctness, security and style before a human read"
     - slug: "security-audit-pipeline"
@@ -60,8 +60,8 @@ project:
       role: optional
       why: "Audit for vulnerabilities and insecure patterns"
     - slug: "documentation-pipeline"
-      version: "1.2.0"
-      content_digest: "sha256:5ba5c1299582f1d87040eee76ff8a5811a26e3d5c8617b8057a65355723997b2"
+      version: "1.2.1"
+      content_digest: "sha256:eebf4d7668d0856f65c072180139f4f30b0a629a417c32926274760c62ab5ade"
       role: optional
       why: "Produce documentation from the code and decisions behind it"
 
@@ -77,7 +77,7 @@ contents:
 
 security:
   status: "pass"
-  scanned_at: "2026-10-16T20:31:38.468Z"
+  scanned_at: "2026-10-18T10:30:57.096Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"

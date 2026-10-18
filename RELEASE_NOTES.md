@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.0.2
+Re-pinned the code review and documentation pipelines to versions that work.
+
+Both were pinned to releases whose content had not caught up with their fixes: two of their steps used a step type the engine does not run, so they would have failed partway rather than completing. The fixed versions are now published and this template points at them.
+
+No change to which pipelines are included or what they do.
+
 ## v1.0.0
 First release — the Software Project template.
 
