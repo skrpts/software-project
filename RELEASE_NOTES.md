@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.0.3
+GH#1133 — re-pin 3 of 4 members to the versions the consumer wave produced. The template pins each member by `version` AND `content_digest`, and catalogue versions are immutable, so the old pins kept resolving and their digests kept verifying: **installs succeeded and delivered pre-wave members**. Nothing broke, which is why nothing reported it.
+
+`feature-spec-pipeline` 1.1.30 → 1.1.31, `code-review-pipeline` 1.1.30 → 1.1.31, `security-audit-pipeline` 1.0.26 → 1.0.27 — each now the version whose steps declare their data flow rather than resolving it positionally. `documentation-pipeline` stays at 1.2.1: it is in the GH#1131 warn-only set and has not moved.
+
+Digests are the catalogue's own `contentHash` for each new version, read from `/api/skrpts/<slug>` rather than recomputed.
+
 ## v1.0.2
 Re-pinned the code review and documentation pipelines to versions that work.
 
