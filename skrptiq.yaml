@@ -3,7 +3,7 @@ id: "f38c0eca-b27a-42c6-9740-ccb723681867"
 name: "software-project"
 display_name: "Software Project"
 description: "A project type that starts with the pipelines software work repeats: specification, review, security and documentation"
-version: "1.0.3"
+version: "1.0.5"
 engine: ">=0.1.0"
 author:
   name: "skrptiq"
@@ -45,8 +45,8 @@ project:
   preamble: "documents/software-project-preamble.md"
   skrpts:
     - slug: "feature-spec-pipeline"
-      version: "1.1.31"
-      content_digest: "sha256:403626531dada13e134bc69572c199d1989da2a4efb0cdf9bc5023bde594fe49"
+      version: "1.1.33"
+      content_digest: "sha256:a8a83b8c4763c0e832c756ec59dcf354b6fec1f16903af98db1cca99713f77ae"
       role: required
       why: "Turn an intent into a specification a developer can build against"
     - slug: "code-review-pipeline"
@@ -77,7 +77,7 @@ contents:
 
 security:
   status: "pass"
-  scanned_at: "2026-11-01T19:09:10.784Z"
+  scanned_at: "2026-11-08T15:31:46.790Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"
