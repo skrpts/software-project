@@ -1,5 +1,25 @@
 # Release Notes
 
+## v1.0.6
+GH#1334 — re-pin `feature-spec-pipeline` 1.1.33 → 1.1.34, which the GH#1334 re-pin wave moved.
+
+The member was republished to carry a published fix it had never received: its `check-input-gaps`
+dependency was pinned one version behind the fix for the `source` slot, so the step could not run.
+That publish staled this pin the moment it landed. **The pin kept resolving and its digest kept
+verifying, so an install of this template SUCCEEDED and delivered the superseded member body** —
+the one without the fix.
+
+**This is the fourth time this sequence has produced this exact re-pin**, and v1.0.5 said why in
+terms: *"any member publish staleds any template pinning it, and nothing fails when it does."*
+Only `check-template-member-pins.mjs` reports it, and only when somebody runs it. Nothing else in
+the pipeline asks the question, which is the same gap that left the member itself stale for 19
+days — a fix framed as "fix the package" produces no template work-list unless somebody asks for
+one.
+
+No content change in this template: the member list, the preamble and the roles are unchanged.
+The digest is an output of the member's publish, resolved from the live catalogue rather than
+transcribed.
+
 ## v1.0.5
 GH#1144 round 2 — re-pin `feature-spec-pipeline` 1.1.32 → 1.1.33, which the round 2 publish moved.
 
